@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ridl"
+dynamic=["version"]
+description = "A program to calculate per-atom metrics to describe electron density change between complete diffraction datasets collected at successive doses."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.8",
+]
+authors = [
+    { name = "Charlie Bury", email = "csbury@me.com" },
+    { name = "Elspeth Garman", email = "elspeth.garman@bioch.ox.ac.uk" }
+]
+maintainers = [
+    { name = "Jon Agirre", email = "jon.agirre@york.ac.uk" },
+]
+dependencies = [
+    "gemmi>=0.7.0"
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools_scm]
+version_file = "src/ridl/_version.py"
+
+[project.urls]
+Homepage = "https://github.com/GarmanGroup/RIDL"
+Issues = "https://github.com/GarmanGroup/RIDL/issues"
+
+[tool.pytest.ini_options]
+markers = [
+]
