@@ -18,10 +18,24 @@ authors = [
     { name = "Elspeth Garman", email = "elspeth.garman@bioch.ox.ac.uk" }
 ]
 maintainers = [
+    { name = "Charlie Bury", email = "csbury@me.com" },
     { name = "Jon Agirre", email = "jon.agirre@york.ac.uk" },
+    { name = "Elspeth Garman", email = "elspeth.garman@bioch.ox.ac.uk" }
 ]
 dependencies = [
-    "gemmi>=0.7.0"
+    "gemmi>=0.7.0",
+    "cycler>=0.10.0",
+    "future>=0.16.0".
+    "kiwisolver>=1.0.1".
+    "matplotlib>=2.2.2",
+    "numpy>=1.14.5",
+    "pandas==0.23.3",
+    "pyparsing>=2.2.0",
+    "dateutil>=2.7.3",
+    "pytz>=2018.5",
+    "scipy>=1.1.0",
+    "seaborn>=0.9.0",
+    "six==1.11.0"
 ]
 
 [tool.setuptools]
