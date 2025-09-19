@@ -3,15 +3,30 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
+dependencies = [
+    "gemmi>=0.7.1",
+    "cycler>=0.10.0",
+    "future>=0.17.1",
+    "kiwisolver>=1.0.1",
+    "matplotlib>=3.6.3",
+    "numpy>=1.22.4",
+    "pandas>=1.3.5",
+    "pyparsing>=2.4.7",
+    "python-dateutil>=2.7.5",
+    "pytz>=2020.5",
+    "scipy>=1.7.3",
+    "seaborn>=0.13.2",
+    "six>=1.11.0"
+] 
 name = "ridl"
-dynamic=["version"]
+dynamic = ["version"]
 description = "A program to calculate per-atom metrics to describe electron density change between complete diffraction datasets collected at successive doses."
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.8"
 ]
 authors = [
     { name = "Charlie Bury", email = "csbury@me.com" },
@@ -19,23 +34,8 @@ authors = [
 ]
 maintainers = [
     { name = "Charlie Bury", email = "csbury@me.com" },
-    { name = "Jon Agirre", email = "jon.agirre@york.ac.uk" },
-    { name = "Elspeth Garman", email = "elspeth.garman@bioch.ox.ac.uk" }
-]
-dependencies = [
-    "gemmi>=0.7.0",
-    "cycler>=0.10.0",
-    "future>=0.16.0".
-    "kiwisolver>=1.0.1".
-    "matplotlib>=2.2.2",
-    "numpy>=1.14.5",
-    "pandas==0.23.3",
-    "pyparsing>=2.2.0",
-    "dateutil>=2.7.3",
-    "pytz>=2018.5",
-    "scipy>=1.1.0",
-    "seaborn>=0.9.0",
-    "six==1.11.0"
+    { name = "Elspeth Garman", email = "elspeth.garman@bioch.ox.ac.uk" },
+    { name = "Jon Agirre", email = "jon.agirre@york.ac.uk" }
 ]
 
 [tool.setuptools]
@@ -49,5 +49,4 @@ Homepage = "https://github.com/GarmanGroup/RIDL"
 Issues = "https://github.com/GarmanGroup/RIDL/issues"
 
 [tool.pytest.ini_options]
-markers = [
-]
+markers = []
