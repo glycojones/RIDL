@@ -19,10 +19,9 @@ def main ():
     #
     # This is the recommended run mode for the scripts.
 
-    ln = 'Run the RIDL pipeline from the command line.'
+    ln = 'Run the CCP4 version of the RIDL pipeline from the command line.'
     parser = argparse.ArgumentParser(description=ln)
 
-    h = 'Check RIDL dependencies are accessible and flag if not'
     parser.add_argument('--dependencies',
                         dest='checkDependencies', action='store_const',
                         default=False, const=True,
@@ -99,6 +98,10 @@ def main ():
                         help='Print verbose output to command line.')
 
     args = parser.parse_args()
+
+    if len(sys.argv) == 1:
+        parser.print_help()
+        sys.exit(0)
 
     # check RIDL dependencies are present
     if args.checkDependencies:
