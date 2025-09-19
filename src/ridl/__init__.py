@@ -1,1 +1,2 @@
-from .ridl import checkDependencies, errors
+from .checkDependencies import checkDependencies
+from .errors import error

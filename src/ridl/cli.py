@@ -1,10 +1,9 @@
 import sys
 import os
+import argparse
+
 FULL_PATH = os.path.abspath(os.path.dirname(sys.argv[0]))
 sys.path.insert(0, FULL_PATH+'/lib')
-
-import argparse
-import sys
 
 
 def main ():
@@ -107,8 +106,8 @@ def main ():
         sys.exit()
 
     # these are here so that they don't interfere with dependency checks
-    from rigidBodyRefine import reRefine
-    from runRIDL_class import process
+    from .rigidBodyRefine import reRefine
+    from .runRIDL_class import process
 
     # create a template input file to be filled in manually by the user
     if args.template != 0:
